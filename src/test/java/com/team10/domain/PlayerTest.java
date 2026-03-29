@@ -13,7 +13,7 @@ class PlayerTest {
         assertEquals("Ali", player.getName());
         assertEquals("Forward", player.getPosition());
         assertEquals(75, player.getSkill());
-        assertEquals(0, player.getInjuryWeeks());
+        assertEquals(0, player.getInjuryMatches());
         assertTrue(player.isAvailable());
         assertFalse(player.isInjured());
     }
@@ -59,7 +59,7 @@ class PlayerTest {
 
         player.injureForMatches(3);
 
-        assertEquals(3, player.getInjuryWeeks());
+        assertEquals(3, player.getInjuryMatches());
         assertTrue(player.isInjured());
         assertFalse(player.isAvailable());
     }
@@ -79,7 +79,7 @@ class PlayerTest {
 
         player.recoverOneWeek();
 
-        assertEquals(1, player.getInjuryWeeks());
+        assertEquals(1, player.getInjuryMatches());
         assertTrue(player.isInjured());
     }
 
@@ -90,7 +90,7 @@ class PlayerTest {
 
         player.recoverOneWeek();
 
-        assertEquals(0, player.getInjuryWeeks());
+        assertEquals(0, player.getInjuryMatches());
         assertTrue(player.isAvailable());
         assertFalse(player.isInjured());
     }

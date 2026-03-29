@@ -13,7 +13,7 @@ public class TeamRecordTest {
         TeamRecord record = new TeamRecord(team);
         Sport football = new FootballSport();
 
-        record.updateRecord(3, 1, football);
+        record.addMatchResult(3, 1, football);
 
         assertEquals(1, record.getMatchesPlayed());
         assertEquals(1, record.getWins());
@@ -27,7 +27,7 @@ public class TeamRecordTest {
         TeamRecord record = new TeamRecord(team);
         Sport football = new FootballSport();
 
-        record.updateRecord(2, 2, football);
+        record.addMatchResult(2, 2, football);
 
         assertEquals(1, record.getDraws());
         assertEquals(1, record.getPoints());
