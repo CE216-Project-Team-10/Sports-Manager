@@ -14,6 +14,8 @@ public interface Sport {
 
     int getPointsForLoss();
 
+    int getQuarterCount();
+
     boolean isValidPlayerCount(int playerCount);
 
     boolean isValidScore(int homeScore, int awayScore);

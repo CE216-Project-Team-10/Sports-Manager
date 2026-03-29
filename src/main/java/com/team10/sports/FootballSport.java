@@ -3,7 +3,7 @@ package com.team10.sports;
 public class FootballSport extends AbstractSport {
 
     public FootballSport() {
-        super("Football", 11, 5, 3, 1, 0);
+        super("Football", 11, 5, 3, 1, 0, 2); // 2 yarı
     }
 
     @Override
@@ -21,13 +21,8 @@ public class FootballSport extends AbstractSport {
         if (!isValidScore(scored, conceded)) {
             throw new IllegalArgumentException("Scores cannot be negative.");
         }
-
-        if (scored > conceded) {
-            return getPointsForWin();
-        } else if (scored == conceded) {
-            return getPointsForDraw();
-        } else {
-            return getPointsForLoss();
-        }
+        if (scored > conceded) return getPointsForWin();
+        if (scored == conceded) return getPointsForDraw();
+        return getPointsForLoss();
     }
 }
